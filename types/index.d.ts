@@ -12,7 +12,9 @@ interface RegisterDes {
 }
 
 declare module 'daruk' {
-  interface Config {}
+  interface Config {
+    [key: string]: any;
+  }
   interface GlobalModule {}
   interface Util {}
   interface Glue {}
@@ -97,6 +99,7 @@ declare module 'daruk' {
   export const JSON: JSONDecorator;
   export const prefix: PrefixClassDecoratorFunc;
   export const redirect: MethodDecoratorFunc;
+  export const type: (type: string) => MethodDecorator;
 
   export const middleware: (middlewareName: string) => MethodDecorator;
 

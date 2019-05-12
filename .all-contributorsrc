@@ -59,6 +59,33 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "Zheaoli",
+      "name": "Manjusaka",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/7054676?s=400&v=4",
+      "profile": "https://github.com/Zheaoli",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "KenyeeC",
+      "name": "KenyeeCheung",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/18223471?v=4",
+      "profile": "https://github.com/KenyeeC",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "ChasLui",
+      "name": "ChasLui",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/10083758?v=4",
+      "profile": "https://github.com/ChasLui",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7

@@ -89,6 +89,19 @@ describe('decorators', () => {
       .expect({ foo: 1 }, done);
   });
 
+  it('decorator @type', (done) => {
+    request(server)
+      .get('/type')
+      .expect('Content-Type', /application\/json/)
+      .expect(code200, done);
+  });
+
+  it('decorator @get for wildcard', (done) => {
+    request(server)
+      .get('/wildcard_3_4.htm')
+      .expect(code200, done);
+  });
+
   it('decorator @redirect', (done) => {
     request(server)
       .get('/redirect')
@@ -98,6 +111,12 @@ describe('decorators', () => {
   it('decorator @prefix', (done) => {
     request(server)
       .get('/v1/prefix/index')
+      .expect(code200, done);
+  });
+
+  it('decorator @prefix deep controller', (done) => {
+    request(server)
+      .get('/v1/prefix/test/deep/json')
       .expect(code200, done);
   });
 
