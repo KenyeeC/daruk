@@ -1,42 +1,42 @@
-# feature todo list
+# Todo
 
-We want be support features before v1.0.0 version's todo list:
+Todo list of features we want to support before version v1.0.0:
 
 - request:
 
-  - @required({methodName:key})
-  - @validate(method,key,validFunc])
-  - @useAuth(middleware)
-  - @security(type,username,password)
+  - [ ] @required({methodName:key})
+  - [ ] @validate(method,key,validFunc])
+  - [ ] @useAuth(middleware)
+  - [ ] @security(type,username,password)
 
 - response:
 
-  - @header(key, value)
-  - @headers({key1:value1,key2:value2})
-  - ~~@type(type:string)~~ √
-  - ~~@redirect(path:string)~~ √
-  - @cache
+  - [x] @header(key|fields, ?value)
+  - [x] @type(type:string)
+  - [x] @redirect(path:string)
+  - [ ] @cache
 
 - arguments:
 
-  - @param(key:string)
-  - @body(key:string)
-  - @query(key:string)
+  - [ ] @param(key:string)
+  - [ ] @body(key:string)
+  - [ ] @query(key:string)
+  - [ ] @headers(key?:string)
 
 - Class:
 
-  - @controller(path:string)
-  - @timer(cronTime:string)
-  - @inject(LibName:string)
-  - @provide(LibName)
-  - @ctx(routerPath)
+  - [ ] @controller(path:string)
+  - [ ] @timer(cronTime:string)
+  - [ ] @inject(LibName:string)
+  - [ ] @provide(LibName)
+  - [ ] @ctx(routerPath)
 
 - controllerClass:
 
-  - @local
-  - ~~@prefix(path:string)~~ √
+  - [ ] @local
+  - [x] @prefix(path:string)
 
 - utils:
 
-  - @decorator
-  - @globalSetting
+  - [ ] @decorator
+  - [ ] @globalSetting

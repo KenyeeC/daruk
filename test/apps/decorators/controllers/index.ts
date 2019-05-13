@@ -4,8 +4,9 @@ import {
   del,
   get,
   head,
-  json,
+  header,
   JSON,
+  json,
   middleware,
   options,
   patch,
@@ -71,6 +72,19 @@ export default class Index extends BaseController {
       foo: 1
     };
   }
+
+  @header('foo', 'bar')
+  @get('/header')
+  public header(ctx: Daruk.Context) {
+    ctx.body = 'bar';
+  }
+
+  @header({foo: 'bar'})
+  @get('/headers')
+  public headers(ctx: Daruk.Context) {
+    ctx.body = 'bar';
+  }
+
   @get('/wildcard_(\\d)_(\\d).htm')
   public deatil(ctx: Daruk.Context) {
     ctx.body = {

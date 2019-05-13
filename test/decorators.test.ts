@@ -96,6 +96,22 @@ describe('decorators', () => {
       .expect(code200, done);
   });
 
+  it('decorator @header', (done) => {
+    request(server)
+      .get('/header')
+      .expect(code200)
+      .expect('foo', 'bar')
+      .expect('bar', done);
+  });
+
+  it('decorator @header', (done) => {
+    request(server)
+      .get('/headers')
+      .expect(code200)
+      .expect('foo', 'bar')
+      .expect('bar', done);
+  });
+
   it('decorator @get for wildcard', (done) => {
     request(server)
       .get('/wildcard_3_4.htm')

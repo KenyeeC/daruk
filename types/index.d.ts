@@ -15,13 +15,27 @@ declare module 'daruk' {
   interface Config {
     [key: string]: any;
   }
-  interface GlobalModule {}
-  interface Util {}
-  interface Glue {}
-  interface Service {}
-  interface Controller {}
-  interface Request extends Koa.Request {}
-  interface Response extends Koa.Response {}
+  interface GlobalModule {
+    [key: string]: any;
+  }
+  interface Util {
+    [key: string]: any;
+  }
+  interface Glue {
+    [key: string]: any;
+  }
+  interface Service {
+    [key: string]: any;
+  }
+  interface Controller {
+    [key: string]: any;
+  }
+  interface Request extends Koa.Request {
+    [key: string]: any;
+  }
+  interface Response extends Koa.Response {
+    [key: string]: any;
+  }
 
   type ExtractInterface<T> = { [P in keyof T]: new (ctx: Context) => T[P] };
 
@@ -52,6 +66,7 @@ declare module 'daruk' {
     };
     public constructor(name: string, options: PartialOptions);
     public run(port: number | string, host?: string | Function, cb?: Function): Http.Server;
+    public listen(port: number | string, host?: string | Function, cb?: Function): Http.Server;
     public serverReady(server: Http.Server | Https.Server): void;
     public registerTimer(describe: RegisterDes | Array<RegisterDes>): void;
     public registerService(describe: RegisterDes | Array<RegisterDes>): void;
@@ -100,8 +115,10 @@ declare module 'daruk' {
   export const prefix: PrefixClassDecoratorFunc;
   export const redirect: MethodDecoratorFunc;
   export const type: (type: string) => MethodDecorator;
+  export const header: (key: string | { [key: string]: string }, value?: string) => MethodDecorator;
 
   export const middleware: (middlewareName: string) => MethodDecorator;
+  export const controller: (prefixPath: string) => ClassDecorator;
 
   type PropDecoratorFunc = (field?: string) => PropertyDecorator;
 

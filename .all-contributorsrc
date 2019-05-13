@@ -86,6 +86,33 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "zhmushan",
+      "name": "木杉",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/24505451?v=4",
+      "profile": "https://github.com/zhmushan",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "icepy",
+      "name": "icepy",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/3321837?v=4",
+      "profile": "https://icepy.me",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "zgayjjf",
+      "name": "jeffjing",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/24718872?v=4",
+      "profile": "https://github.com/zgayjjf",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7
